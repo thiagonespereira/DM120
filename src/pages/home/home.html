@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Incubadora Neonatal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <p>
+    Monitoração dos parâmetros da Incubadora.
+  </p>  
+  <p style="text-align: center">
+    <button ion-button color="secondary" outline icon-left (click)="goToTempPage()">
+      <ion-icon name="rainy" color="blue"></ion-icon>
+      Temperatura
+    </button>
+  </p>
+  <p style="text-align: center">
+      <button ion-button color="secondary" outline icon-left (click)="goToLuxPage()">
+        <ion-icon name="rainy" color="blue"></ion-icon>
+        Luminosidade
+      </button>
+    </p>
+  
+     <ion-card>
+        <ion-card-content style="text-align: center; font-size: 2rem;">
+            {{msgTocado}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+        <ion-card-content style="text-align: center; font-size: 2rem;">
+            {{msgBotao}}                    
+        </ion-card-content>
+    </ion-card> 
+
+    <ion-card>
+        <ion-card-content style="text-align: center; font-size: 3rem;">
+            {{msgStatus}}                    
+        </ion-card-content>
+    </ion-card>
+
+    <p style="text-align: center">
+        <button ion-button color="secondary" (click)="alarme(1)">
+          Acionar Alarme
+        </button>
+        <button ion-button color="secondary" (click)="alarme(0)">
+            Desligar Alarme
+          </button>
+      </p>
+
+ 
+</ion-content>
